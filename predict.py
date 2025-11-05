@@ -1,14 +1,12 @@
 from cog import BasePredictor, Input
 import torch
-from PIL import Image
-from torchvision import transforms
 
 class Predictor(BasePredictor):
     def setup(self):
-        pass  # Här laddar du din tränade modell vid behov
+        # Ladda modellen
+        self.model = torch.load("checkpoints/planritningsmodel.ckpt")
 
-    def predict(
-        self,
-        image: Input(description="Inputskiss", type=Path),
-    ) -> Path:
-        return image  # Här returnerar vi bara samma bild – byt mot inference-logik
+    def predict(self, image: Input(description="Input image")):
+        # Gör prediktion med modellen
+        return image  # ersätt med riktig output
+
