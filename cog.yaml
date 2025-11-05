@@ -21,4 +21,4 @@ train:
       type: int
       default: 1
 
-predict: predict.py:Predictor
+predict: "predict.py:Predictor"
