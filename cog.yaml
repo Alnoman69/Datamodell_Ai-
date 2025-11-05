@@ -20,4 +20,3 @@ train:
     - name: --batch_size
       type: int
       default: 1
-
